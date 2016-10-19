@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DockFXMLController">
+   <left>
+      <VBox fx:id="menuRoot" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label fx:id="lblTitle" prefHeight="26.0" prefWidth="210.0" text="Menu">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label onMouseClicked="#onMenuClick">
+                     <graphic>
+                        <ImageView fx:id="imageMenuButton" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#onMenuClick" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/home-button-1.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Home" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER_LEFT">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </VBox>
+            <StackPane fx:id="imagePaneTop" prefHeight="127.0" prefWidth="217.0" style="-fx-background-color: #99022d; -fx-padding: 10; -fx-background-radius: 5;">
+               <children>
+                  <ImageView fx:id="imagePortrait" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#selectProfile" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/user_anonymous_yellow_disabled.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <Label fx:id="lblName" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#selectProfile" text="Name" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="30.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Separator fx:id="sep_1" prefHeight="0.0" prefWidth="103.0" style="-fx-background-color: #99022d;" />
+            <HBox>
+               <children>
+                  <ImageView fx:id="imageMenu1" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/text-documents.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Region prefHeight="10.0" prefWidth="10.0" />
+                  <Label fx:id="lblMenu1" onMouseClicked="#selectMenu1" text="Overview">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </HBox>
+            <Separator fx:id="sep_2" prefWidth="100.0" style="-fx-background-color: #99022d;" />
+            <HBox>
+               <children>
+                  <ImageView fx:id="imageMenu2" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/check-list.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Region prefHeight="10.0" prefWidth="10.0" />
+                  <Label fx:id="lblMenu2" onMouseClicked="#selectMenu2" text="ISUM">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </HBox>
+            <Separator fx:id="sep_3" prefWidth="100.0" style="-fx-background-color: #99022d;" />
+            <HBox>
+               <children>
+                  <ImageView fx:id="imageMenu3" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/share-content.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Region prefHeight="10.0" prefWidth="10.0" />
+                  <Label fx:id="lblMenu3" onMouseClicked="#selectMenu3" text="LAMS">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </HBox>
+            <Separator fx:id="sep_4" prefWidth="100.0" style="-fx-background-color: #99022d;" />
+            <HBox>
+               <children>
+                  <ImageView fx:id="imageMenu4" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/email-envelope-button.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Region prefHeight="10.0" prefWidth="10.0" />
+                  <Label fx:id="lblMenu4" onMouseClicked="#selectMenu4" text="Mail">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </HBox>
+            <Separator fx:id="sep_5" style="-fx-background-color: #99022d;" />
+            <HBox>
+               <children>
+                  <ImageView fx:id="imageMenu5" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/speech-bubble-with-ellipsis.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Region prefHeight="10.0" prefWidth="10.0" />
+                  <Label fx:id="lblMenu5" text="Chat" textFill="#867a7a">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Label>
+               </children>
+            </HBox>
+            <Separator fx:id="sep_6" style="-fx-background-color: #99022d;" />
+            <HBox prefHeight="80.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="imageLogout" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/exit-right-arrow.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Region prefHeight="10.0" prefWidth="10.0" />
+                  <Label fx:id="lblLogout" onMouseClicked="#selectLogout" text="Logout">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <StackPane fx:id="imagePaneBottom" prefHeight="55.0" prefWidth="237.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/logo1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </left>
+   <top>
+      <GridPane fx:id="Dock" alignment="CENTER" onMouseEntered="#showDock" onMouseExited="#hideDock" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <center>
+                  <Label onMouseClicked="#selectCRUD" BorderPane.alignment="CENTER">
+                     <tooltip>
+                        <Tooltip text="Users" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fx:id="imageEditUsers" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#selectCRUD" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/edit-button.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </center>
+            </BorderPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+               <center>
+                  <Label BorderPane.alignment="CENTER">
+                     <tooltip>
+                        <Tooltip text="Info" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fx:id="imageInfo" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/round-information-button.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </center>
+            </BorderPane>
+            <TextField fx:id="tfSearch" alignment="CENTER_RIGHT" focusTraversable="false" onMouseMoved="#searchMouseOver" prefHeight="25.0" prefWidth="128.0" promptText="Search" GridPane.columnIndex="3">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+   </top>
+   <center>
+      <StackPane fx:id="stackPane" />
+   </center>
+</BorderPane>
