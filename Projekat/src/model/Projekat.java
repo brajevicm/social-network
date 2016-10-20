@@ -24,7 +24,7 @@ public class Projekat extends Application {
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/view/LoginFXML.fxml"));
 
-        primaryStage.setTitle("Metropolitan Social Hub");
+        primaryStage.setTitle("Milos");
         scene = new Scene(root, 650, 400);
         primaryStage.setScene(scene);
         primaryStage.show();
